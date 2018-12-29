@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+<!-- Form with a POST method to post the city information for the submit button and the API will do return the rest -->
+    <fieldset>
+        <form action="/wearther" method="post">
+            <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+            <input type="submit" class="ghost-button" value="Get Weather">
+        </form>
+
+<!-- If statements to show certain images for the user of the website. The images depends on the details of the weather. -->
+        <% if(weather !== null){ %>
+            <p><%= weather %></p>
+
+
+            <% if(temp <= 5){%>
+            <img src="images/cold.png" alt="temp">
+
+            <% } else if(temp <= 15) { %>
+            <img src="images/cool.jpg">
+
+            <% } else if(temp <= 25) { %>
+                <img src="images/opt.jpg">
+
+            <% } else if(temp <= 30) { %>
+                <img src="images/heat.jpg">
+
+            <% } else if(temp <= 35) { %>
+                <img src="images/hot.jpg">
+
+            <% } else if(temp => 35) { %>
+                <img src="images/hell.jpg">
+            <% } %>
+
+            <p><%= test %></p>
+
+        <% } %>
+
+
+        <% if(error !== null){ %>
+            <p><%= error %></p>
+        <% } %>
+
+
+
+    </fieldset>
+
+</body>
+</html>
