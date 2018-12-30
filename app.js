@@ -3,6 +3,7 @@ const createError = require('http-errors');
 const path = require('path');
 const cookieParser =  require('cookie-parser');
 const logger = require('morgan');
+
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -81,4 +82,3 @@ app.post('/', function (req, res) {
 */
 
 //poort where site is listing
-app.listen(10333);

@@ -5,7 +5,7 @@ const request = require('request');
 const apiKey = '0de153a6e7924982ab8b6a2131983a2d';
 
 /* GET home page. */
-router.get('/~', function (req, res, next) {
+router.get('/~s1091971/P2_NodeJS_Opdracht/333', function (req, res, next) {
     error = req.query.error;
     res.render('index', {title: 'WeatherApp', error: error});
 });
